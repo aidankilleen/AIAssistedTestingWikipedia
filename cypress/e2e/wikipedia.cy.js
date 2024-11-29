@@ -22,10 +22,11 @@ describe('Wikipedia Search Feature', () => {
   it('should navigate to an article from the search results', () => {
     cy.get('input#searchInput').type('Python');
     cy.get('button[type="submit"]').click();
-    cy.get('#mw-content-text').find('li').first().find('a').click();
+    cy.get('#mw-content-text').find('li').first().find('a').first().click(); // Refined to target the first <a>
     cy.url().should('include', '/wiki/Python');
     cy.get('#firstHeading').should('contain', 'Python');
-  });
+});
+
 
 
 
