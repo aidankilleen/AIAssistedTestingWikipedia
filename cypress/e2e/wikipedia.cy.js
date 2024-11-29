@@ -19,6 +19,16 @@ describe('Wikipedia Search Feature', () => {
     cy.get('.suggestions-dropdown').should('contain', 'Java (programming language)');
   });
 
+  it('should navigate to an article from the search results', () => {
+    cy.get('input#searchInput').type('Python');
+    cy.get('button[type="submit"]').click();
+    cy.get('#mw-content-text').find('li').first().find('a').click();
+    cy.url().should('include', '/wiki/Python');
+    cy.get('#firstHeading').should('contain', 'Python');
+  });
+
+
+
   it('should return relevant results for multi-word search queries', () => {
     cy.get('input#searchInput').type('history of programming');
     cy.get('button[type="submit"]').click();
