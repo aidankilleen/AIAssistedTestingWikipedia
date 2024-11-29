@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+        #div1 {
+            color: orange;
+        }
+        #div2 {
+            color: blue;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000000;
+        }
+
+        #div1 h1 {
+            color: green;
+        }
+        .box > h1 {
+            color: blue;
+        }
+        #list li:first-child {
+            color: red;
+        }
+        #list li:last-child {
+            color: blue;
+        }
+        #list li:nth-child(4) {
+            color: orange;
+        }
+        .box:nth-child(3) {
+            background-color: red;
+        }
+
+        .box[id="box3"] {
+            background-color: orange;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Test Selector Syntax</h1>
+
+    <div id="box1" class="box">
+        <p>paragraph</p>
+        <h1>Box 1</h1>
+    </div>
+    <div id="box2" class="box">
+        <h1>Box 2</h1>
+    </div>
+    <div id="box3" class="box">
+        <h1>Box3</h1>
+    </div>
+
+    <div id="div1">
+
+        <h1>H1 In A Div</h1>
+        this is a div - which is a section of the page
+    </div>
+    <div id="div2">
+        this is another div - which is a section of the page
+    </div>
+
+    <ul id="list">
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+    </ul>
+
+    <h1>Another Section</h1>
+</body>
+</html>

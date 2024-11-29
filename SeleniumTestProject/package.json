@@ -1,0 +1,16 @@
+{
+  "name": "seleniumtestproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chromedriver": "^131.0.1",
+    "selenium-webdriver": "^4.27.0"
+  }
+}
